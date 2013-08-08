@@ -32,6 +32,7 @@ Vagrant::configure("2") do |config|
           :words_of_wisdom => "Chuck Norris' beard can type 140 wpm!"
         }
       }
+      chef.log_level = :debug
     end
   end 
 end
