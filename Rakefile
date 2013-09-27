@@ -15,9 +15,9 @@ end
 
 desc "check code style"
 task :codestyle do
-  sh "tailor ./**/*.rb"
+  sh "tailor"
 end
 
 
 desc "run all tests"
-task :test => [:syntax, :foodcritic] 
+task :test => [:syntax, :foodcritic, :codestyle]
