@@ -24,4 +24,3 @@ template "/var/www/sample.html" do
     :words_of_wisdom => node['sample_app']['words_of_wisdom']
   )
 end
-
