@@ -1,6 +1,8 @@
 
 # README
 
+[![Build Status](https://travis-ci.org/tknerr/sample-application-cookbook.png?branch=master)](https://travis-ci.org/tknerr/sample-application-cookbook)
+
 This is a minimal "application cookbook" example which represents your application and depends on other "library cookbooks".
 
 It's really nothing more than a templatable sample.html file served via apache. 
