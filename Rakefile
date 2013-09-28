@@ -18,6 +18,11 @@ task :codestyle do
   sh "tailor"
 end
 
+desc "run chefspec examples"
+task :spec do
+  sh "rspec -fd --color"
+end
+
 
 desc "run all tests"
-task :test => [:syntax, :foodcritic, :codestyle]
+task :test => [:syntax, :foodcritic, :codestyle, :spec]
