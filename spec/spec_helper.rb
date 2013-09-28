@@ -12,7 +12,10 @@ berksfile.install(path: COOKBOOKS_DIR)
 # an optional block for setting node attributes.
 #
 def chef_run(&block)
-  chef_run = ChefSpec::ChefRunner.new(cookbook_path: COOKBOOKS_DIR)
+  chef_run = ChefSpec::ChefRunner.new(
+    cookbook_path: COOKBOOKS_DIR,
+    log_level: :error
+  )
   chef_run.instance_eval(&block) if block_given?
   chef_run.converge described_recipe
 end
