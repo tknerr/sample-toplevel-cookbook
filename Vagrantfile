@@ -4,7 +4,7 @@ Vagrant::configure("2") do |config|
   # enable cachier
   config.cache.auto_detect = true
   # the Chef version to use
-  config.omnibus.chef_version = "11.4.4"
+  config.omnibus.chef_version = "11.6.0"
   # enable berkshelf plugin
   config.berkshelf.enabled = true
   
@@ -19,7 +19,8 @@ Vagrant::configure("2") do |config|
     # configure host-only network
     sample_app_config.vm.hostname = "sample-app.local"
     sample_app_config.vm.network :private_network, ip: "33.33.40.15" 
-    # virtualbox customizations
+
+    # virtualbox-specific customizations
     sample_app_config.vm.provider :virtualbox do |vbox, override|
       vbox.customize ["modifyvm", :id, "--name", "sample-app.local"] 
     end
