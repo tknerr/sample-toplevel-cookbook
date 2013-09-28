@@ -8,12 +8,12 @@ task :syntax do
   sh "knife cookbook test #{CURRENT_DIR} -o .."
 end
 
-desc "run foodcritic checks"
+desc "run foodcritic lint checks"
 task :foodcritic do
   sh "foodcritic -f any ."
 end
 
-desc "check code style"
+desc "check code style with tailor"
 task :codestyle do
   sh "tailor"
 end
@@ -23,6 +23,12 @@ task :spec do
   sh "rspec -fd --color"
 end
 
+desc "run test-kitchen integration tests"
+task :integration do
+  sh "kitchen test --log-level info"
+end
+
 
 desc "run all tests"
 task :test => [:syntax, :foodcritic, :codestyle, :spec]
+
