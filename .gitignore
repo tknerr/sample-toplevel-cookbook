@@ -1,4 +1,5 @@
-.kitchen
-.vagrant
-.cookbooks
+.kitchen/
+.vagrant/
+.cookbooks/
 Berksfile.lock
+Gemfile.lock
