@@ -11,10 +11,9 @@ berksfile.install(path: COOKBOOKS_DIR)
 # shortcut for converging the `described_recipe`. you can pass 
 # an optional block for setting node attributes.
 #
-def chef_run(&block)
+def chef_run(args = {}, &block)
   chef_run = ChefSpec::ChefRunner.new(
-    cookbook_path: COOKBOOKS_DIR,
-    log_level: :error
+    args.merge(cookbook_path: COOKBOOKS_DIR, log_level: :error)
   )
   chef_run.instance_eval(&block) if block_given?
   chef_run.converge described_recipe
