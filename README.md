@@ -10,13 +10,14 @@ It's really nothing more than a templatable sample.html file served via apache.
 
 # USAGE
 
-## Run Linting, Codestyle and ChefSpec Examples
+## Running Unit and Integration Tests
 
 * run `bundle install` to install the required gems from `Gemfile`
 * run `rake -T` to see the available rake tasks for testing this cookbook
-* run `rake test` to run all tests, including syntax, foodcritic, codestyle and chefspec
+* run `rake test` to run all unit-level tests, including syntax, foodcritic, codestyle and chefspec
+* run `rake integration` to run integration tests via test-kitchen / serverspec
 
-## Running the Application Vagrant VM
+## Running the Application in a Vagrant VM
 
 * run `vagrant plugin bundle` to install the vagrant plugins as defined in `plugins.json`
 * run `vagrant up sample-app` to bring up the sample-app in a local virtualbox VM
