@@ -1,6 +1,7 @@
 
 # 0.1.2 (unreleased)
 
+* Output chef environment in `sample.html`
 * Update cookbook versions
  * apache 1.7.0
  * apt 2.2.0
