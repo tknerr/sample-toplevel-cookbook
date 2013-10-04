@@ -29,6 +29,6 @@ task :integration do
 end
 
 
-desc "run all tests"
+desc "run all unit-level tests"
 task :test => [:syntax, :foodcritic, :codestyle, :spec]
 
