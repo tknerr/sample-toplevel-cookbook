@@ -1,5 +1,5 @@
 
-# 0.1.2 (unreleased)
+# 0.1.2 (Oct 5, 2013)
 
 * Output chef environment in `sample.html`
 * Update cookbook versions
