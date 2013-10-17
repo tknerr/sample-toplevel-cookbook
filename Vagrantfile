@@ -28,12 +28,13 @@ Vagrant::configure("2") do |config|
     # provisioning
     sample_app_config.vm.provision :chef_solo do |chef|
       chef.add_recipe "sample-app"
+      chef.data_bags_path = "./test/data_bags"
       chef.json = {
         :sample_app => {
           :words_of_wisdom => "Chuck Norris' beard can type 140 wpm!"
         }
       }
-      chef.log_level = :debug
+      chef.log_level = :info
     end
   end 
 end
