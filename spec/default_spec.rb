@@ -29,4 +29,13 @@ describe "sample-app::default" do
     }}
     it { should render_file("/var/www/sample.html").with_content("no cats today :-(") }
   end
+
+  context "with data bag items" do
+    before do
+      stub_data_bag("yummy").and_return(["ananas"])
+      stub_data_bag_item("yummy", "ananas").and_return({ id: "ananas", desc: 'yellow & sweet'})
+    end
+    subject { chef_run }
+    it { should render_file("/var/www/sample.html").with_content("<li>ananas: yellow & sweet</li>") }
+  end
 end
