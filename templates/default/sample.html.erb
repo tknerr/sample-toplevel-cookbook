@@ -6,6 +6,13 @@
     <p>Running in environment <b><%= @node.chef_environment %></b></p>
     <p>The sample app seems to work if you can see this!</p>
     <p>This is what a wise man once said:<blockquote><%= @words_of_wisdom %></blockquote></p>
+    <p>And these are some yummy ingredients straight from the <b>'yummy' data_bag</b>: 
+    <ul>
+      <% @yummy_ingredients.each do |item| %>
+        <li><%= item["id"] %>: <%= item["desc"] %></li>
+      <% end %>
+    </ul>
+    </p>
     <p>Cheers!</p>
   </body>
 </html>
