@@ -1,7 +1,7 @@
 
 # 0.1.4 (unreleased)
 
-* ...
+* Add data bag example
 
 # 0.1.2 (Oct 5, 2013)
 
