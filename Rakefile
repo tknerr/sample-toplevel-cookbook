@@ -20,7 +20,7 @@ end
 
 desc "run chefspec examples"
 task :spec do
-  sh "rspec -fd --color"
+  sh "rspec -fd --color -I test/chefspec test/chefspec"
 end
 
 desc "run test-kitchen integration tests"

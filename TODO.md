@@ -1,7 +1,7 @@
 
 # TODO
 
-- [ ] move spec/ to test/unit
+- [x] move spec/ to test/unit
 - [ ] add minitest-chefhandler smoke tests
 - [ ] add :unit and :integration groups to gemfile
 - [ ] add leibniz / cucumber test
