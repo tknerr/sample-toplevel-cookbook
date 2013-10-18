@@ -5,7 +5,7 @@
 - [ ] add minitest-chefhandler smoke tests
 - [ ] add :unit and :integration groups to gemfile
 - [ ] add leibniz / cucumber test
-- [ ] add .chefignore
+- [x] add .chefignore
 - [ ] improve README
 - [ ] which serverspec file runs for which suite?!?
 - [ ] test with kitchen-lxc on an ubuntu "devpack" VM
