@@ -4,7 +4,7 @@ Vagrant::configure("2") do |config|
   # enable cachier
   config.cache.auto_detect = true
   # the Chef version to use
-  config.omnibus.chef_version = "11.6.0"
+  config.omnibus.chef_version = "11.6.2"
   # enable berkshelf plugin
   config.berkshelf.enabled = true
   
