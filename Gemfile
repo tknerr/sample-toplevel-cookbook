@@ -11,7 +11,7 @@ gem 'json', '1.7.7'
 group :test do
   gem 'foodcritic', '3.0.1'
   gem 'tailor', '1.2.1'
-  gem 'chefspec', '3.0.0.beta.4'
+  gem 'chefspec', '3.0.0'
 end
 
 group :integration do
