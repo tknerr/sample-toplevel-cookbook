@@ -10,6 +10,9 @@ gem 'stove', '1.1.2',
 # fix dependency conflict
 gem 'json', '1.7.7'
 
+# faraday 0.9 breaks berkshelf
+gem 'faraday', '0.8.9'
+
 group :test do
   gem 'foodcritic', '3.0.1'
   gem 'tailor', '1.2.1'
