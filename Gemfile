@@ -18,12 +18,12 @@ gem 'berkshelf', '3.1.3'
 
 # add missing chef deps for windows:
 # see https://github.com/opscode/mixlib-shellout/issues/50
-platforms :x64_mingw do
-  gem 'win32-process', '0.7.4'
-  gem 'windows-pr', '1.2.3'
-  gem 'ruby-wmi', '0.4.0'
-  gem 'win32-service', '0.8.4'
-end
+#platforms :x64_mingw do
+#  gem 'win32-process', '0.7.4'
+#  gem 'windows-pr', '1.2.3'
+#  gem 'ruby-wmi', '0.4.0'
+#  gem 'win32-service', '0.8.4'
+#end
 
 group :test do
   gem 'foodcritic', '4.0.0'
