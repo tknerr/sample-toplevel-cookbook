@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 
-gem 'chef', '11.12.8'
+gem 'chef', '11.14.0.rc.1', 
+  git: "https://github.com/opscode/chef.git", ref: "11.14.0.rc.1"
 gem 'berkshelf', '3.1.3'
 #gem 'berkshelf', '2.0.10'
 
