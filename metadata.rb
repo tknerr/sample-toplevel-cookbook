@@ -9,5 +9,5 @@ version          "0.1.3"
 # 
 # dependencies on "library cookbooks"
 #
-depends "apache2",  "1.7.0"
-depends "apt",      "2.2.0"
+depends "apache2",  "1.10.4"
+depends "apt",      "2.4.0"
