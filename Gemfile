@@ -29,7 +29,7 @@ gem 'berkshelf', '3.1.3'
 group :test do
   gem 'foodcritic', '4.0.0'
   gem 'tailor', '1.4.0'
-  gem 'chefspec', '4.0.0'
+  gem 'chefspec', '4.0.1'
 end
 
 group :integration do
