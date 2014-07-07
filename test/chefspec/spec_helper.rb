@@ -5,7 +5,7 @@ require 'chefspec/berkshelf'
 # global/default configuration
 #
 RSpec.configure do |config|
-  config.log_level = :info
+  config.log_level = :error
 end
 
 #
