@@ -25,21 +25,24 @@ end
 
 desc "run test-kitchen integration tests"
 task :integration do
-  vagrant_bin = `which vagrant`
-  if vagrant_bin.include? "lib/ruby/gems/"
-    fail <<-EOF
+  # weird things happen if vagrant is installed as a gem, see #5
+  if `which vagrant`.include? "lib/ruby/gems/"
+    puts <<-EOF
 ###
 ### WARNING
 ###
 ###   You have vagrant installed as a gem which breaks test-kitchen in a bundler environment :-(
 ###   See https://github.com/test-kitchen/kitchen-vagrant/issues/64
 ###
-###   Either remove '#{vagrant_bin.chomp}'
-###   Or run `kitchen test` directly
+###   Will run `kitchen test` outside of the bundler environment, i.e. Gemfile has no effect! 
 ###
 EOF
+    Bundler.with_original_env do
+      sh "kitchen test --log-level info"
+    end
+  else
+      sh "kitchen test --log-level info"
   end
-  sh "kitchen test --log-level info"
 end
 
 desc "run all unit-level tests"
