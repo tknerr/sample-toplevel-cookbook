@@ -20,7 +20,11 @@ if Chef::Config['data_bag_path'].is_a? Array
 end
 
 # read yummy ingredients from databag
-yummy_stuff = data_bag('yummy').map { |id| data_bag_item('yummy', id) }
+begin
+  yummy_stuff = data_bag('yummy').map { |id| data_bag_item('yummy', id) }
+rescue => e
+  log "can not load data_bag: #{e.message}"
+end
 
 # deploy sample html page 
 template "/var/www/sample.html" do

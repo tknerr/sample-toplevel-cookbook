@@ -38,4 +38,12 @@ describe "sample-app::default" do
     subject { chef_run }
     it { should render_file("/var/www/sample.html").with_content("<li>ananas: yellow & sweet</li>") }
   end
+
+  context "when data_bag_path is invalid" do
+    before do
+      stub_data_bag("yummy").and_raise(Chef::Exceptions::InvalidDataBagPath)
+    end
+    subject { chef_run }
+    it { should write_log("can not load data_bag: Chef::Exceptions::InvalidDataBagPath") }
+  end
 end
