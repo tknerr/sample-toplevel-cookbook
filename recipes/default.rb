@@ -34,6 +34,6 @@ template "/var/www/sample.html" do
   mode 00644
   variables(
     :words_of_wisdom => node['sample_app']['words_of_wisdom'],
-    :yummy_ingredients => yummy_stuff
+    :yummy_ingredients => yummy_stuff || []
   )
 end
