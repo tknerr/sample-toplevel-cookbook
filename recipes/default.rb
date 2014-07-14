@@ -15,7 +15,8 @@ node.set['apache']['default_site_enabled'] = true
 include_recipe "apache2"
 
 # read yummy ingredients from databag
-yummy_stuff = data_bag('yummy').map { |id| data_bag_item('yummy', id) }
+yummy_bag = data_bag('yummy')
+yummy_stuff = (yummy_bag || []).map { |id| data_bag_item('yummy', id) }
 
 # deploy sample html page 
 template "/var/www/sample.html" do
