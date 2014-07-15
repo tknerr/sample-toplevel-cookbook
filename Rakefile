@@ -25,7 +25,24 @@ end
 
 desc "run test-kitchen integration tests"
 task :integration do
-  sh "kitchen test --log-level info"
+  # weird things happen if vagrant is installed as a gem, see #5
+  if `which vagrant`.include? "lib/ruby/gems/"
+    puts <<-EOF
+###
+### WARNING
+###
+###   You have vagrant installed as a gem which breaks test-kitchen in a bundler environment :-(
+###   See https://github.com/test-kitchen/kitchen-vagrant/issues/64
+###
+###   Will run `kitchen test` outside of the bundler environment, i.e. Gemfile has no effect! 
+###
+EOF
+    Bundler.with_original_env do
+      sh "kitchen test --log-level info"
+    end
+  else
+      sh "kitchen test --log-level info"
+  end
 end
 
 desc "run all unit-level tests"
@@ -33,10 +50,10 @@ task :test => [:syntax, :foodcritic, :codestyle, :spec]
 
 desc "release the cookbook (metadata, tag, push)"
 task :release do
-  print "enter release version number [x.y.z]: "
-  if (version = STDIN.gets.chomp).match /\d+\.\d+\.\d+/
-    sh "bake #{version} --no-jira --no-github --no-changelog --no-upload --devodd -l info"
+  print "This will create and push a tag with the version from `metadata.rb`. Continue? [y/n] "
+  if (STDIN.gets.chomp).match /[yY][eE][sS]/
+    sh "stove -l info"
   else
-    fail "bad version number format"
+    puts "release aborted"
   end
 end
