@@ -5,6 +5,7 @@
 * Update to latest gems for cookbook testing
 * Update to latest cookbooks in metadata
 * Update to Chef 11.12.8 in test-kitchen and Vagrantfile
+* Switch to 10.x.x.x network in Vagrantfile
 
 # 0.1.4 (unreleased)
 
