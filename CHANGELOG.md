@@ -1,4 +1,11 @@
 
+# 0.2.0
+
+* Update to Ruby 2.0 / Berkshelf 3
+* Update to latest gems for cookbook testing
+* Update to latest cookbooks in metadata
+* Update to Chef 11.12.8 in test-kitchen and Vagrantfile
+
 # 0.1.4 (unreleased)
 
 * Add data bag example
