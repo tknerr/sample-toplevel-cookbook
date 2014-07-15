@@ -50,10 +50,10 @@ task :test => [:syntax, :foodcritic, :codestyle, :spec]
 
 desc "release the cookbook (metadata, tag, push)"
 task :release do
-  print "enter release version number [x.y.z]: "
-  if (version = STDIN.gets.chomp).match /\d+\.\d+\.\d+/
-    sh "bake #{version} --no-jira --no-github --no-changelog --no-upload --devodd -l info"
+  print "This will create and push a tag with the version from `metadata.rb`. Continue? [y/n] "
+  if (STDIN.gets.chomp).match /[yY][eE][sS]/
+    sh "stove -l info"
   else
-    fail "bad version number format"
+    puts "release aborted"
   end
 end
