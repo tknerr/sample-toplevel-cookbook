@@ -1,6 +1,7 @@
 
 # 0.2.0
 
+* Rename cookbook to "sample-toplevel-cookbook"
 * Update to Ruby 2.0 / Berkshelf 3
 * Update to latest gems for cookbook testing
 * Update to latest cookbooks in metadata
