@@ -4,7 +4,7 @@ ruby '2.0.0'
 
 gem 'chef', '11.14.0.rc.2'
 gem 'berkshelf', '3.1.3'
-gem 'stove', '3.2.0'
+gem 'stove', '3.2.1'
 
 group :test do
   gem 'foodcritic', '4.0.0'
