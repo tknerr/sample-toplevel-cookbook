@@ -18,7 +18,7 @@ Vagrant::configure("2") do |config|
     sample_app_config.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box"
     # configure host-only network
     sample_app_config.vm.hostname = "sample-app.local"
-    sample_app_config.vm.network :private_network, ip: "10.33.40.15"
+    sample_app_config.vm.network :private_network, ip: "192.168.40.15"
 
     # virtualbox-specific customizations
     sample_app_config.vm.provider :virtualbox do |vbox, override|
