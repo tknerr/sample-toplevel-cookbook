@@ -2,7 +2,7 @@
 driver_plugin: vagrant
 driver_config:
   # see https://github.com/test-kitchen/test-kitchen/issues/440
-  require_chef_omnibus: 11.12.8 -d /tmp/vagrant-cache/vagrant_omnibus
+  require_chef_omnibus: 11.14.0.rc.2 -d /tmp/vagrant-cache/vagrant_omnibus
 
 platforms:
 - name: ubuntu-12.04
