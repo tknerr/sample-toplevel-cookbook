@@ -7,8 +7,8 @@ driver_config:
 platforms:
 - name: ubuntu-12.04
   driver_config:
-    box: opscode_ubuntu-12.04_provisionerless
-    box_url: https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_provisionerless.box
+    box: opscode_ubuntu-12.04-i386_provisionerless
+    box_url: https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04-i386_provisionerless.box
 
 suites:
 - name: default
