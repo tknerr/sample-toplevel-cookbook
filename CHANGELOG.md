@@ -1,19 +1,23 @@
 
 # 0.2.2 (unreleased)
 
-* Update to stove 3.2.1
-* Use 192.168.x.x network in Vagrantfile
+* test / toolchain updates:
+  * Use i386 baseboxes so tests can be run on 32-bit hosts as well
+  * Update to Chef 11.14.0.rc.2
+  * Update to stove 3.2.1
+  * Use 192.168.x.x network in Vagrantfile
 
 # 0.2.0 (July 15, 2014)
 
 * Rename cookbook to "sample-toplevel-cookbook"
-* Update to Ruby 2.0 / Berkshelf 3
-* Update to latest gems for cookbook testing
 * Update to latest cookbooks in metadata
   * apache 1.10.4
   * apt 2.4.0
-* Update to Chef 11.12.8 in test-kitchen and Vagrantfile
-* Switch to 10.x.x.x network in Vagrantfile
+* test / toolchain updates: 
+  * Update to Ruby 2.0 / Berkshelf 3
+  * Update to latest gems for cookbook testing
+  * Update to Chef 11.12.8 in test-kitchen and Vagrantfile
+  * Switch to 10.x.x.x network in Vagrantfile
 
 # 0.1.4 (unreleased)
 
