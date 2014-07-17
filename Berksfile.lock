@@ -12,6 +12,6 @@ GRAPH
   iptables (0.13.2)
   logrotate (1.6.0)
   pacman (1.1.1)
-  sample-app (0.2.0)
+  sample-app (0.2.1)
     apache2 (= 1.10.4)
     apt (= 2.4.0)
