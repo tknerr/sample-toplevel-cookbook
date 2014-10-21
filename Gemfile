@@ -10,6 +10,9 @@ group :test do
   gem 'foodcritic', '4.0.0'
   gem 'tailor', '1.4.0'
   gem 'chefspec', '4.0.1'
+
+  # force usage of compatible log_switch version for tailor
+  gem 'log_switch', '0.4.0'
 end
 
 group :integration do
