@@ -41,7 +41,7 @@ EOF
       sh "kitchen test --log-level info"
     end
   else
-      sh "kitchen test --log-level info"
+    sh "kitchen test --log-level info"
   end
 end
 
