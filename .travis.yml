@@ -4,9 +4,9 @@ rvm:
 before_script:
   - mkdir .chef
   - |
-    cat << EOF > .chef/knife.rb
-cache_type 'BasicFile'
-cache_options(:path => "#{ENV['HOME']}/.chef/checksums")
-EOF
+    cat <<EOF > .chef/knife.rb
+    cache_type 'BasicFile'
+    cache_options(:path => "#{ENV['HOME']}/.chef/checksums")
+    EOF
 script:
   - rake test
