@@ -13,7 +13,7 @@ end
 # an optional block for setting node attributes.
 #
 def chef_run(args = {}, &block)
-  chef_run = ChefSpec::Runner.new(args)
+  chef_run = ChefSpec::SoloRunner.new(args)
   chef_run.instance_eval(&block) if block_given?
   chef_run.converge described_recipe
 end
