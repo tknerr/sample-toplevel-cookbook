@@ -13,6 +13,7 @@ group :test do
 end
 
 group :integration do
+  gem 'vagrant-wrapper', '2.0.1'
   gem 'test-kitchen', '1.2.1'
   gem 'kitchen-vagrant', '0.15.0'
   gem 'serverspec', '2.3.1'
