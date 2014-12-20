@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'chef', '11.16.4'
-gem 'berkshelf', '3.2.1'
+gem 'berkshelf', '3.2.2'
 gem 'stove', '3.2.3'
 
 group :test do
