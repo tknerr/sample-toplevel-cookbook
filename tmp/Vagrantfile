@@ -1,0 +1,6 @@
+
+Vagrant::configure("2") do |config|
+
+    config.vm.box = "chef/ubuntu-12.04-i386"
+
+end
