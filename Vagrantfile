@@ -24,6 +24,10 @@ Vagrant::configure("2") do |config|
     sample_app_config.vm.provider :virtualbox do |vbox, override|
       vbox.customize ["modifyvm", :id, "--name", "sample-app.local"] 
     end
+    # use equivalent lxc basebox
+    sample_app_config.vm.provider :virtualbox do |lxc, override|
+      override.vm.box = "fgrehm/precise64-lxc"
+    end
     
     # provisioning
     sample_app_config.vm.provision :chef_solo do |chef|
