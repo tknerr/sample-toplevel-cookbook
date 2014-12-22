@@ -8,6 +8,8 @@ platforms:
 - name: ubuntu-12.04-i386
   driver_config:
     box: chef/ubuntu-12.04-i386
+    customize:
+      memory: 256
 
 
 suites:
