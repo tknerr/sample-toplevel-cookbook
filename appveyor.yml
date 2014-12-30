@@ -40,3 +40,4 @@ build_script:
 - bundle install
 test_script:
 - rake spec
+- rake integration
