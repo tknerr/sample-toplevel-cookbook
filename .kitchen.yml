@@ -5,9 +5,10 @@ driver_config:
   require_chef_omnibus: 11.16.4 -d /tmp/vagrant-cache/vagrant_omnibus
 
 platforms:
-- name: ubuntu-12.04-i386
+- name: ubuntu-12.04
   driver_config:
-    box: chef/ubuntu-12.04-i386
+    box: ubuntu/precise32
+    box_url: https://atlas.hashicorp.com/ubuntu/boxes/precise32/versions/12.04.4/providers/virtualbox.box
     customize:
       memory: 128
 

@@ -14,7 +14,7 @@ Vagrant::configure("2") do |config|
   config.vm.define :"sample-app" do | sample_app_config |
     
     # configure the basebox
-    sample_app_config.vm.box = "chef/ubuntu-12.04-i386"
+    sample_app_config.vm.box = "ubuntu/precise32"
 
     # configure host-only network
     sample_app_config.vm.hostname = "sample-app.local"
