@@ -9,7 +9,7 @@ platforms:
   driver_config:
     box: chef/ubuntu-12.04-i386
     customize:
-      memory: 256
+      memory: 128
 
 
 suites:
