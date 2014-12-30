@@ -25,7 +25,7 @@ end
 
 desc "run test-kitchen integration tests"
 task :integration do
-  sh "kitchen test --log-level info"
+  sh "kitchen test --log-level debug"
 end
 
 desc "run all unit-level tests"
