@@ -1,14 +1,21 @@
 ---
-driver_plugin: vagrant
-driver_config:
+driver:
+  name: vagrant
   # see https://github.com/test-kitchen/test-kitchen/issues/440
   require_chef_omnibus: 11.16.4 -d /tmp/vagrant-cache/vagrant_omnibus
+
+provisioner:
+  name: chef_solo
 
 platforms:
 - name: ubuntu-12.04
   driver_config:
-    box: ubuntu/precise32
-    box_url: https://atlas.hashicorp.com/ubuntu/boxes/precise32/versions/12.04.4/providers/virtualbox.box
+    box: <%= ENV['VAGRANT_DEFAULT_PROVIDER'] == 'lxc' \
+      ? 'fgrehm/precise64-lxc' \
+      : 'ubuntu/precise32' %>
+    box_url: <%= ENV['VAGRANT_DEFAULT_PROVIDER'] == 'lxc' \
+      ? 'https://atlas.hashicorp.com/fgrehm/boxes/precise64-lxc/versions/1.2.0/providers/lxc.box' \
+      : 'https://atlas.hashicorp.com/ubuntu/boxes/precise32/versions/12.04.4/providers/virtualbox.box' %>
     customize:
       memory: 128
 
