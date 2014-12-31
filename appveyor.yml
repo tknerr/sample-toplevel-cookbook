@@ -37,7 +37,7 @@ install:
 - gem install bundler --quiet --no-ri --no-rdoc
 - bundler --version
 build_script:
-- bundle install
+- bundle install --verbose
 test_script:
 - rake spec
 - rake integration
