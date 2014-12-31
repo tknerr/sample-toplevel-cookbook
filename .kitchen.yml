@@ -12,10 +12,10 @@ platforms:
   driver_config:
     box: <%= ENV['VAGRANT_DEFAULT_PROVIDER'] == 'lxc' \
       ? 'fgrehm/precise64-lxc' \
-      : 'ubuntu/precise32' %>
+      : 'chef/ubuntu-12.04-i386' %>
     box_url: <%= ENV['VAGRANT_DEFAULT_PROVIDER'] == 'lxc' \
       ? 'https://atlas.hashicorp.com/fgrehm/boxes/precise64-lxc/versions/1.2.0/providers/lxc.box' \
-      : 'https://atlas.hashicorp.com/ubuntu/boxes/precise32/versions/12.04.4/providers/virtualbox.box' %>
+      : 'https://atlas.hashicorp.com/chef/boxes/ubuntu-12.04-i386/versions/1.0.0/providers/virtualbox.box' %>
     customize:
       memory: 128
 
