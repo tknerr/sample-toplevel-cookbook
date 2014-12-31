@@ -14,10 +14,10 @@ init:
     mkdir C:\downloads | Out-Null
     cd C:\downloads
     Start-FileDownload 'https://gist.githubusercontent.com/tknerr/71fc51b591db47541a46/raw/cacert.pem'
-    Start-FileDownload "https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.1.msi"
-    Start-Process -FilePath "msiexec.exe" -ArgumentList "/a vagrant_1.7.1.msi /qb TARGETDIR=C:\Vagrant-1.7.1" -Wait
-    Start-FileDownload "http://download.virtualbox.org/virtualbox/4.3.20/VirtualBox-4.3.20-96997-Win.exe"
-    Start-Process -FilePath "VirtualBox-4.3.20-96997-Win.exe" -ArgumentList "-silent -logging -msiparams INSTALLDIR=C:\VBox-4.3.20" -Wait
+    #Start-FileDownload "https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.1.msi"
+    #Start-Process -FilePath "msiexec.exe" -ArgumentList "/a vagrant_1.7.1.msi /qb TARGETDIR=C:\Vagrant-1.7.1" -Wait
+    #Start-FileDownload "http://download.virtualbox.org/virtualbox/4.3.20/VirtualBox-4.3.20-96997-Win.exe"
+    #Start-Process -FilePath "VirtualBox-4.3.20-96997-Win.exe" -ArgumentList "-silent -logging -msiparams INSTALLDIR=C:\VBox-4.3.20" -Wait
     cd $env:APPVEYOR_BUILD_FOLDER
 - ps: |
     While ((Test-NetConnection google.com -Port 80 -InformationLevel Quiet) -ne "True") {
@@ -30,8 +30,8 @@ cache:
 install:
 - set PATH=C:\Vagrant-1.7.1\HashiCorp\Vagrant\bin;C:\Ruby200\bin;C:\VBox-4.3.20;%PATH%
 - set SSL_CERT_FILE=C:\downloads\cacert.pem
-- vagrant -v
-- VBoxManage -v
+#- vagrant -v
+#- VBoxManage -v
 - ruby --version
 - gem --version
 - gem install bundler --quiet --no-ri --no-rdoc
@@ -40,4 +40,4 @@ build_script:
 - bundle install
 test_script:
 - rake spec
-- rake integration
+#- rake integration
