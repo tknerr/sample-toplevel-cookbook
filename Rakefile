@@ -10,7 +10,7 @@ end
 
 desc "run foodcritic lint checks"
 task :foodcritic do
-  sh "foodcritic -f any ."
+  sh "foodcritic -f any -t ~FC007 ."
 end
 
 desc "check code style with tailor"
