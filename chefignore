@@ -1,9 +1,10 @@
-.git/*
-.vagrant/*
+.git
+.vagrant
 .gitignore
 .kitchen.yml
 .tailor
 .travis.yml
+.kitchen
 test/*
 Gemfile
 Gemfile.lock
