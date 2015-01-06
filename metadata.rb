@@ -12,5 +12,4 @@ locked_deps = IO.read('Berksfile.lock').lines.drop_while { |l| l != "GRAPH\n" }
 locked_deps.keep_if { |line| line.match(/^\s{2}\w+\s\(.*\)/) }.each do |entry|
   dep_name, dep_version = entry.strip.match(/^(\w+)\s\((.*)\)/).captures
   depends(dep_name, dep_version) unless dep_name.eql? name
-  puts "added dep #{dep_name} #{dep_version}"
 end
