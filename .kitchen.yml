@@ -17,7 +17,13 @@ platforms:
       ? 'https://atlas.hashicorp.com/fgrehm/boxes/precise64-lxc/versions/1.2.0/providers/lxc.box' \
       : 'https://atlas.hashicorp.com/chef/boxes/ubuntu-12.04-i386/versions/1.0.0/providers/virtualbox.box' %>
     customize:
+    <% if ENV['VAGRANT_DEFAULT_PROVIDER'] == 'lxc' %>
+      container_name: "kitchen-sample-toplevel-cookbook-#{Time.now.to_f}"
+      cgroup.memory.limit_in_bytes: '128M'
+    <% else %>
       memory: 128
+    <% end %>
+
 
 
 suites:
