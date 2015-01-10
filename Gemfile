@@ -4,6 +4,11 @@ gem 'chef', '11.16.4'
 gem 'berkshelf', '3.2.2'
 gem 'stove', '3.2.3'
 
+# fix for berkshelf/berkshelf-api-client#3
+gem 'berkshelf-api-client', '1.2.0',
+  :git => 'https://github.com/berkshelf/berkshelf-api-client.git',
+  :ref => 'ed66a0a7a11ccf8c9475dd01d337f45eaae34e48'
+
 group :test do
   gem 'foodcritic', '4.0.0'
   gem 'tailor', '1.4.1'
