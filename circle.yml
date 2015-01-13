@@ -16,5 +16,3 @@ test:
     - bundle exec rake test
     - bundle exec kitchen verify:
         timeout: 900
-    - bundle exec kitchen destroy
-    - bundle exec kitchen destroy
