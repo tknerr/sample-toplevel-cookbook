@@ -3,8 +3,8 @@ machine:
     - docker
   ruby:
     version: 2.1.3
-    environment:
-      KITCHEN_YAML: .kitchen.docker.yml
+  environment:
+    KITCHEN_YAML: .kitchen.docker.yml
 
 dependencies:
   override:
