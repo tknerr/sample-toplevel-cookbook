@@ -3,7 +3,6 @@ machine:
     version: 2.1.3
   environment:
     VAGRANT_DEFAULT_PROVIDER: lxc
-    VAGRANT_LOG: DEBUG
 
 dependencies:
   cache_directories:
@@ -23,3 +22,5 @@ test:
     - rake test
     - rake integration:
         timeout: 900
+        environment:
+          VAGRANT_LOG: DEBUG
