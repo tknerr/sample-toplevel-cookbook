@@ -3,17 +3,8 @@ machine:
     - docker
   ruby:
     version: 2.1.3
-  environment:
-    VAGRANT_DEFAULT_PROVIDER: lxc
 
 dependencies:
-  cache_directories:
-    - ~/.vagrant.d
-  pre:
-    - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb
-    - sudo dpkg -i vagrant_1.7.2_x86_64.deb
-    - vagrant plugin install vagrant-lxc --plugin-version 1.0.1
-    - sudo vagrant lxc sudoers
   override:
     - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3:
         timeout: 900
@@ -24,5 +15,4 @@ test:
     - bundle exec rake integration:
         timeout: 900
         environment:
-          VAGRANT_LOG: DEBUG
           KITCHEN_YAML: .kitchen.docker.yml
