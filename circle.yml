@@ -15,7 +15,7 @@ dependencies:
     - vagrant plugin install vagrant-lxc --plugin-version 1.0.1
     - sudo vagrant lxc sudoers
   override:
-    - bundle install --jobs=4 --retry=3:
+    - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3:
         timeout: 900
 
 test:
