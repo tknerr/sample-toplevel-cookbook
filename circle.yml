@@ -1,4 +1,6 @@
 machine:
+  services:
+    - docker
   ruby:
     version: 2.1.3
   environment:
