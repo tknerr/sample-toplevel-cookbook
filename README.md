@@ -1,9 +1,7 @@
 
 # README
 
-[![Build Status](https://travis-ci.org/tknerr/sample-toplevel-cookbook.png?branch=master)](https://travis-ci.org/tknerr/sample-toplevel-cookbook)
-
-[![Circle CI](https://circleci.com/gh/tknerr/sample-toplevel-cookbook/tree/master.svg?style=shield)](https://circleci.com/gh/tknerr/sample-toplevel-cookbook/tree/master)
+[![Build Status](https://travis-ci.org/tknerr/sample-toplevel-cookbook.png?branch=master)](https://travis-ci.org/tknerr/sample-toplevel-cookbook) [![Circle CI](https://circleci.com/gh/tknerr/sample-toplevel-cookbook/tree/master.svg?style=shield)](https://circleci.com/gh/tknerr/sample-toplevel-cookbook/tree/master)
 
 This is a minimal "toplevel cookbook" example. A "toplevel cookbook" is the single [top-level cookbook](http://lists.opscode.com/sympa/arc/chef/2014-01/msg00419.html) which represents a node. It may depend on other "library" or "application" cookbooks.
 
