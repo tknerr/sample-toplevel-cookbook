@@ -12,7 +12,8 @@ dependencies:
 test:
   override:
     - bundle exec rake test
-    - bundle exec rake integration:
+    - bundle exec kitchen verify:
         timeout: 900
         environment:
           KITCHEN_YAML: .kitchen.docker.yml
+    - bundle exec kitchen destroy
