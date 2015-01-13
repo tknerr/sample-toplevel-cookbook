@@ -3,6 +3,8 @@ machine:
     - docker
   ruby:
     version: 2.1.3
+    environment:
+      KITCHEN_YAML: .kitchen.docker.yml
 
 dependencies:
   override:
@@ -14,6 +16,4 @@ test:
     - bundle exec rake test
     - bundle exec kitchen verify:
         timeout: 900
-        environment:
-          KITCHEN_YAML: .kitchen.docker.yml
     - bundle exec kitchen destroy
