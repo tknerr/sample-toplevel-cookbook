@@ -19,8 +19,8 @@ dependencies:
 
 test:
   override:
-    - rake test
-    - rake integration:
+    - bundle exec rake test
+    - bundle exec rake integration:
         timeout: 900
         environment:
           VAGRANT_LOG: DEBUG
