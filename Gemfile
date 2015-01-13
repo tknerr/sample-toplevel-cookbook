@@ -13,8 +13,6 @@ end
 group :integration do
   gem 'vagrant-wrapper', '2.0.1'
   gem 'test-kitchen', '1.2.1'
-  gem 'kitchen-vagrant', '0.15.0',
-    :git => 'https://github.com/tknerr/kitchen-vagrant.git',
-    :ref => 'lxc-provider-support'
+  gem 'kitchen-docker-api'
   gem 'serverspec', '2.3.1'
 end
