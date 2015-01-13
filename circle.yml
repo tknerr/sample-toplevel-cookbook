@@ -21,8 +21,7 @@ dependencies:
 test:
   override:
     - bundle exec rake test
-    # - bundle exec rake integration:
-    - bundle exec kitchen verify:
+    - bundle exec rake integration:
         timeout: 900
         environment:
           VAGRANT_LOG: DEBUG
