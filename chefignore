@@ -6,6 +6,7 @@
 .travis.yml
 .kitchen
 test/*
+vendor/*
 Gemfile
 Gemfile.lock
 plugins.json
