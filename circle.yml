@@ -25,4 +25,4 @@ test:
         timeout: 900
         environment:
           VAGRANT_LOG: DEBUG
-          KITCHEN_YAML: .kitchen.docker.yml
+          KITCHEN_YAML: .kitchen.yml
