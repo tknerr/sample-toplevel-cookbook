@@ -1,11 +1,11 @@
 ---
 driver:
   name: vagrant
-  # see https://github.com/test-kitchen/test-kitchen/issues/440
-  require_chef_omnibus: 11.16.4 -d /tmp/vagrant-cache/vagrant_omnibus
 
 provisioner:
   name: chef_solo
+  require_chef_omnibus: 11.16.4
+  chef_omnibus_install_options: -d /tmp/vagrant-cache/vagrant_omnibus
 
 platforms:
 - name: ubuntu-12.04
