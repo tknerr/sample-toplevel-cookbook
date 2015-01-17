@@ -1,0 +1,11 @@
+---
+driver:
+  name: vagrant
+
+platforms:
+- name: ubuntu-12.04
+  driver_config:
+    box: fgrehm/precise64-lxc
+    box_url: https://atlas.hashicorp.com/fgrehm/boxes/precise64-lxc/versions/1.2.0/providers/lxc.box
+    customize:
+      cgroup.memory.limit_in_bytes: 128M
