@@ -1,8 +1,7 @@
 DEPENDENCIES
-  apache2 (= 1.10.4)
-  apt (= 2.4.0)
   sample-app
     path: .
+    metadata: true
 
 GRAPH
   apache2 (1.10.4)
@@ -16,6 +15,3 @@ GRAPH
   sample-app (0.2.1)
     apache2 (= 1.10.4)
     apt (= 2.4.0)
-    iptables (= 0.14.1)
-    logrotate (= 1.7.0)
-    pacman (= 1.1.1)
