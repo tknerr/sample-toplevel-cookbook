@@ -4,6 +4,8 @@ describe "sample-app::default" do
 
   before do
     stub_data_bag("yummy").and_return([])
+    stub_command("/usr/sbin/apache2 -t").and_return("Syntax OK")
+    stub_command("/usr/sbin/httpd -t").and_return("Syntax OK")
   end
 
   context "on ubuntu systems" do
@@ -24,7 +26,7 @@ describe "sample-app::default" do
   end
 
   context "when 'words_of_wisdom' are set" do
-    subject { chef_run { 
+    subject { chef_run {
       node.set['sample_app']['words_of_wisdom'] = "no cats today :-("
     }}
     it { should render_file("/var/www/sample.html").with_content("no cats today :-(") }
