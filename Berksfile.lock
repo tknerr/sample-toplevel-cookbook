@@ -4,14 +4,12 @@ DEPENDENCIES
     metadata: true
 
 GRAPH
-  apache2 (1.10.4)
+  apache2 (3.0.0)
     iptables (>= 0.0.0)
     logrotate (>= 0.0.0)
-    pacman (>= 0.0.0)
-  apt (2.4.0)
+  apt (2.6.1)
   iptables (0.14.1)
   logrotate (1.7.0)
-  pacman (1.1.1)
   sample-app (0.2.1)
-    apache2 (= 1.10.4)
-    apt (= 2.4.0)
+    apache2 (= 3.0.0)
+    apt (= 2.6.1)
