@@ -1,17 +1,17 @@
 
 # README
 
-[![Build Status](https://travis-ci.org/tknerr/sample-toplevel-cookbook.png?branch=master)](https://travis-ci.org/tknerr/sample-toplevel-cookbook) [![Circle CI](https://circleci.com/gh/tknerr/sample-toplevel-cookbook/tree/master.svg?style=shield)](https://circleci.com/gh/tknerr/sample-toplevel-cookbook/tree/master)
+[![Circle CI](https://circleci.com/gh/tknerr/sample-toplevel-cookbook/tree/master.svg?style=shield)](https://circleci.com/gh/tknerr/sample-toplevel-cookbook/tree/master)
 
 This is a minimal "toplevel cookbook" example. A "toplevel cookbook" is the single [top-level cookbook](http://lists.opscode.com/sympa/arc/chef/2014-01/msg00419.html) which represents a node. It may depend on other "library" or "application" cookbooks.
 
-Note: this cookbook was previously (until v0.1.2) named `sample-application-cookbook`, but since the term "application cookbook" is so much overloaded in the Chef community [I now call them "top-level cookbooks"](https://github.com/berkshelf/berkshelf/issues/535#issuecomment-40890497). 
+Note: this cookbook was previously (until v0.1.2) named `sample-application-cookbook`, but since the term "application cookbook" is so much overloaded in the Chef community [I now call them "top-level cookbooks"](https://github.com/berkshelf/berkshelf/issues/535#issuecomment-40890497).
 
 # TOP-LEVEL APPLICATION
 
 In this case it's really nothing more than a templatable sample.html file served via apache.
 
-It outputs the value of the `node['sample_app']['words_of_wisdom']` attribute to the `sample.html` file and optionally the items of the data bag named `yummy` (if any). 
+It outputs the value of the `node['sample_app']['words_of_wisdom']` attribute to the `sample.html` file and optionally the items of the data bag named `yummy` (if any).
 
 # TOOLING
 
