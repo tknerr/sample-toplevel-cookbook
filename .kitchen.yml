@@ -16,8 +16,8 @@ platforms:
       memory: 128
 - name: ubuntu-14.04
   driver_config:
-    box: chef/ubuntu-14.04-i386
-    box_url: https://atlas.hashicorp.com/chef/boxes/ubuntu-14.04-i386/versions/1.0.0/providers/virtualbox.box
+    box: chef/ubuntu-14.04
+    box_url: https://atlas.hashicorp.com/chef/boxes/ubuntu-14.04/versions/1.0.0/providers/virtualbox.box
     customize:
       memory: 128
 
