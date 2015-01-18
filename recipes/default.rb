@@ -17,6 +17,11 @@ package "net-tools"
 node.set['apache']['default_site_enabled'] = true
 include_recipe "apache2"
 
+# ensure the service is started
+service "apache2" do
+  action [:enable, :start]
+end
+
 # workaround for CHEF-4753
 if Chef::Config['data_bag_path'].is_a? Array
   Chef::Config['data_bag_path'] = Chef::Config['data_bag_path'].first
@@ -29,7 +34,7 @@ rescue => e
   log "can not load data_bag: #{e.message}"
 end
 
-# deploy sample html page 
+# deploy sample html page
 template "/var/www/sample.html" do
   source "sample.html.erb"
   owner node['apache']['user']

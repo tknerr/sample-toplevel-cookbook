@@ -14,5 +14,5 @@ dependencies:
 test:
   override:
     - bundle exec rake test
-    - bundle exec kitchen verify:
+    - bundle exec kitchen verify -c:
         timeout: 900
