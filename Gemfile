@@ -11,7 +11,7 @@ group :test do
 end
 
 group :integration do
-  gem 'vagrant-wrapper', '2.0.1'
+  gem 'vagrant-wrapper', '2.0.2'
   gem 'test-kitchen', '1.3.1'
   gem 'kitchen-docker', '1.7.0'
   gem 'kitchen-vagrant', '0.15.0',
