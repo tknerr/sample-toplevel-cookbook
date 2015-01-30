@@ -18,7 +18,7 @@ Vagrant::configure("2") do |config|
 
     # configure host-only network
     sample_app_config.vm.hostname = "sample-app.local"
-    sample_app_config.vm.network :private_network, ip: "192.168.40.15"
+    sample_app_config.vm.network :private_network, ip: "172.16.40.15"
 
     # virtualbox-specific customizations
     sample_app_config.vm.provider :virtualbox do |vbox, override|

@@ -41,6 +41,6 @@ It adds testing on the following levels:
 ## Running the Application in a Vagrant VM
 
 * run `vagrant up sample-app` to bring up the sample-app in a local virtualbox VM
-* visit http://10.33.40.15/sample.html to check whether our sample app is deployed
+* visit http://172.16.40.15/sample.html to check whether our sample app is deployed
 * change the `:words_of_wisdom` in Vagrantfile, provision via `vagrant provision sample-app` and check the sample app again
 * run `vagrant destroy sample-app` to terminate and delete the VM
