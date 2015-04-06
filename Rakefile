@@ -1,11 +1,9 @@
 
-CURRENT_DIR=File.basename(Dir.getwd)
-
 require 'bundler/setup'
 
 desc "run syntax check"
 task :syntax do
-  sh "knife cookbook test #{CURRENT_DIR} -o .."
+  sh "knife cookbook test sample-app -o .."
 end
 
 desc "run foodcritic lint checks"
