@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "sample-toplevel-cookbook::default" do
 
   context "installing packages" do
-    subject { ChefSpec::SoloRunner.converge(described_recipe) }
+    subject { ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '12.04').converge(described_recipe) }
     it { should install_package 'foo' }
     it { should install_package 'htop' }
   end
