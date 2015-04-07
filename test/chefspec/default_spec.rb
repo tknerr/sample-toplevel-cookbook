@@ -1,7 +1,15 @@
 require 'spec_helper'
 
-describe "sample-app::default" do
+describe "sample-toplevel-cookbook::default" do
 
+  context "installing packages" do
+    subject { ChefSpec::SoloRunner.converge(described_recipe) }
+    it { should install_package 'foo' }
+    it { should install_package 'htop' }
+  end
+end
+
+=begin
   before do
     stub_data_bag("yummy").and_return([])
     stub_command("/usr/sbin/apache2 -t").and_return("Syntax OK")
@@ -15,8 +23,12 @@ describe "sample-app::default" do
   end
 
   context "on centos systems" do
-    subject { chef_run(platform: 'centos', version: '6.3') }
+#    subject { chef_run(platform: 'centos', version: '6.3') }
+   
+    subject { ChefSpec::SoloRunner.new(platform: 'centos', version: '6.3').converge(described_recipe) } 
     it { should install_package 'httpd' }
+    it { should install_package 'foo' }
+    it { should install_package 'htop' }
     it { should start_service 'httpd' }
   end
 
@@ -50,3 +62,4 @@ describe "sample-app::default" do
     it { should render_file("/var/www/sample.html").with_content(/<ul>\s*<\/ul>/) }
   end
 end
+=end

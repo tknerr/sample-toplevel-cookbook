@@ -7,6 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
+=begin
 # refresh apt cache
 include_recipe "apt"
 
@@ -16,7 +17,13 @@ package "net-tools"
 # ensure default site is enabled and install apache
 node.set['apache']['default_site_enabled'] = true
 include_recipe "apache2"
+=end
 
+package 'foo' do
+  package_name 'htop'
+end
+
+=begin
 # ensure the service is started
 service "apache2" do
   action [:enable, :start]
@@ -45,3 +52,4 @@ template "/var/www/sample.html" do
     :yummy_ingredients => yummy_stuff || []
   )
 end
+=end
