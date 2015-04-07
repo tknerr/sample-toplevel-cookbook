@@ -1,4 +1,8 @@
 DEPENDENCIES
+  apache2
+    git: https://github.com/tknerr/apache2-cookbook.git
+    revision: f2f0fa011641430daec0e6cfcf9ec1dde24528ab
+    ref: patch-1
   sample-app
     path: .
     metadata: true
