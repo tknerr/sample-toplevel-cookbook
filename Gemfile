@@ -7,7 +7,7 @@ gem 'stove', '3.2.6'
 group :test do
   gem 'foodcritic', '4.0.0'
   gem 'tailor', '1.4.1'
-  gem 'chefspec', '4.2.0'
+  gem 'chefspec', '4.2.0', git: "https://github.com/tknerr/chefspec.git", ref: "patch-1"
 end
 
 group :integration do
