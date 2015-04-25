@@ -30,7 +30,7 @@ Vagrant::configure("2") do |config|
     end
 
     # provisioning
-    sample_app_config.vm.provision :chef_solo do |chef|
+    sample_app_config.vm.provision :chef_zero do |chef|
       chef.add_recipe "sample-app"
       chef.data_bags_path = "./test/integration/data_bags"
       chef.json = {
