@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'chef', '12.3.0.rc.0', git: "https://github.com/tknerr/chef.git", ref: "fix-knife-on-windows"
+gem 'chef', '12.3.0.rc.0', git: 'https://github.com/tknerr/chef.git', ref: 'fix-knife-on-windows'
 gem 'berkshelf', '3.2.3'
 gem 'stove', '3.2.6'
 
 group :test do
   gem 'foodcritic', '4.0.0'
   gem 'rubocop', '0.30.1'
-  gem 'chefspec', '4.2.0', git: "https://github.com/tknerr/chefspec.git", ref: "patch-1"
+  gem 'chefspec', '4.2.0', git: 'https://github.com/tknerr/chefspec.git', ref: 'patch-1'
 end
 
 group :integration do

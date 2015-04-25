@@ -8,17 +8,17 @@
 #
 
 # refresh apt cache
-include_recipe "apt"
+include_recipe 'apt'
 
 # XXX: ensure netstat is installed because it's required by the serverspec tests
-package "net-tools"
+package 'net-tools'
 
 # ensure default site is enabled and install apache
 node.set['apache']['default_site_enabled'] = true
-include_recipe "apache2"
+include_recipe 'apache2'
 
 # ensure the service is started
-service "apache2" do
+service 'apache2' do
   action [:enable, :start]
 end
 
@@ -35,8 +35,8 @@ rescue => e
 end
 
 # deploy sample html page
-template "/var/www/sample.html" do
-  source "sample.html.erb"
+template '/var/www/sample.html' do
+  source 'sample.html.erb'
   owner node['apache']['user']
   group node['apache']['group']
   mode 00644
