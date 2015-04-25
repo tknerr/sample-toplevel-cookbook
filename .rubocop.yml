@@ -1,0 +1,28 @@
+Metrics/LineLength:
+  Max: 120
+
+Style/BlockDelimiters:
+  Enabled: true
+  Exclude:
+    - 'test/**/*.rb'
+
+Style/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: true
+  Exclude:
+    - Rakefile
+
+Style/MultilineBlockLayout:
+  Enabled: true
+  Exclude:
+    - 'test/**/*.rb'
+
+Style/SingleSpaceBeforeFirstArg:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - 'Vagrantfile'
+    - 'vendor/bundle/**/*'

@@ -5,6 +5,7 @@
   * Use i386 baseboxes so tests can be run on 32-bit hosts as well
   * Update to Chef 12.3.0.rc.0
   * Update to stove 3.2.1
+  * Remove tailor in favor of rubocop for ruby codestyle + linting
   * Use 192.168.x.x network in Vagrantfile
 
 # 0.2.0 (July 15, 2014)
