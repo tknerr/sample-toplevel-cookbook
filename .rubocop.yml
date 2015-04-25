@@ -24,4 +24,5 @@ Style/SingleSpaceBeforeFirstArg:
 
 AllCops:
   Exclude:
-    - Vagrantfile
+    - 'Vagrantfile'
+    - 'vendor/bundle/**/*'
