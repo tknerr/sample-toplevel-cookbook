@@ -13,7 +13,7 @@ end
 
 desc "check code style with tailor"
 task :codestyle do
-  sh "rubocop"
+  sh "rubocop --format progress --format offenses"
 end
 
 desc "run chefspec examples"
