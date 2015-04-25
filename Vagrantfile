@@ -1,5 +1,5 @@
 
-Vagrant::configure('2') do |config|
+Vagrant.configure('2') do |config|
 
   # enable cachier
   #config.cache.scope = :box

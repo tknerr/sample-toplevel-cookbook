@@ -13,17 +13,12 @@ Lint/UnusedBlockArgument:
 # Offense count: 9
 # Configuration parameters: AllowURI, URISchemes.
 Metrics/LineLength:
-  Max: 101
+  Max: 120
 
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, ProceduralMethods, FunctionalMethods, IgnoredMethods.
 Style/BlockDelimiters:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/ColonMethodCall:
   Enabled: false
 
 # Offense count: 3
