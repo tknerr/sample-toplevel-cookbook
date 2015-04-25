@@ -2,6 +2,11 @@
 driver:
   name: docker
 
+driver_config:
+  provision_command: curl -L https://www.opscode.com/chef/install.sh | bash -s -- -v 12.0.3
+  require_chef_omnibus: false
+  use_sudo: false
+
 platforms:
 - name: ubuntu-12.04
 - name: ubuntu-14.04
