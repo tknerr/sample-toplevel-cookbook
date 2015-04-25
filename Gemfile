@@ -13,7 +13,7 @@ end
 group :integration do
   gem 'vagrant-wrapper', '2.0.2'
   gem 'test-kitchen', '1.4.0.rc.1'
-  gem 'kitchen-docker', '2.0.0', git: "https://github.com/tknerr/kitchen-docker.git", ref: "windows-fixes"
+  gem 'kitchen-docker', '2.1.0'
   gem 'kitchen-vagrant', '0.17.0.rc.1'
   gem 'serverspec', '2.14.0'
 end
