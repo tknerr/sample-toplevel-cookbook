@@ -32,6 +32,8 @@ Style/EmptyLinesAroundBlockBody:
 # Configuration parameters: EnforcedStyle, SupportedStyles, UseHashRocketsWithSymbolValues.
 Style/HashSyntax:
   Enabled: false
+  Exclude:
+    - Rakefile
 
 # Offense count: 1
 # Cop supports --auto-correct.

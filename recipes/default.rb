@@ -41,7 +41,7 @@ template '/var/www/sample.html' do
   group node['apache']['group']
   mode 00644
   variables(
-    :words_of_wisdom => node['sample_app']['words_of_wisdom'],
-    :yummy_ingredients => yummy_stuff || []
+    words_of_wisdom: node['sample_app']['words_of_wisdom'],
+    yummy_ingredients: yummy_stuff || []
   )
 end
