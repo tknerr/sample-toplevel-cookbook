@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'chef', '12.3.0.rc.0', git: "https://github.com/chef/chef.git", ref: "12.3.0.rc.0"
+gem 'chef', '12.3.0.rc.0', git: "https://github.com/tknerr/chef.git", ref: "fix-knife-on-windows"
 gem 'berkshelf', '3.2.3'
 gem 'stove', '3.2.6'
 
