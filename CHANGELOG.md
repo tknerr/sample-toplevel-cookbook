@@ -1,4 +1,8 @@
 
+# 0.3.0 (unreleased)
+
+* ...
+
 # 0.2.2 (April 15, 2015)
 
 * cleanup:
