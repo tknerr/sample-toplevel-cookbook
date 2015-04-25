@@ -47,6 +47,6 @@ describe "sample-app::default" do
     end
     subject { chef_run }
     it { should write_log("can not load data_bag: Chef::Exceptions::InvalidDataBagPath") }
-    it { should render_file("/var/www/sample.html").with_content(/<ul>\s*<\/ul>/) }
+    it { should render_file("/var/www/sample.html").with_content(%r{<ul>\s*</ul>}) }
   end
 end
