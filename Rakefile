@@ -22,7 +22,7 @@ task :integration do
 end
 
 desc 'run all unit-level tests'
-task :test => [:syntax, :foodcritic, :codestyle, :spec]
+task :test => [:foodcritic, :codestyle, :spec]
 
 desc 'release the cookbook (metadata, tag, push)'
 task :release do
