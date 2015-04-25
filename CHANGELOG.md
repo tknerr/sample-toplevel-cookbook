@@ -1,11 +1,15 @@
 
-# 0.2.2 (unreleased)
+# 0.2.2 (April 15, 2015)
 
+* cleanup:
+  * remove workaround for CHEF-4753 from default recipe which was relevant for older Chef Solo version only
 * test / toolchain updates:
   * Use i386 baseboxes so tests can be run on 32-bit hosts as well
   * Update to Chef 12.3.0.rc.0
   * Update to stove 3.2.1
-  * Remove tailor in favor of rubocop for ruby codestyle + linting
+  * Replace tailor with rubocop for ruby codestyle + linting
+  * Remove `knife cookbook test` syntax check
+  * Add docker based test-kitchen tests on CircleCI
   * Use 192.168.x.x network in Vagrantfile
 
 # 0.2.0 (July 15, 2014)
