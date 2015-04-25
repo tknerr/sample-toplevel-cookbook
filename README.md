@@ -7,13 +7,13 @@ This is a minimal "toplevel cookbook" example. A "toplevel cookbook" is the sing
 
 Note: this cookbook was previously (until v0.1.2) named `sample-application-cookbook`, but since the term "application cookbook" is so much overloaded in the Chef community [I now call them "top-level cookbooks"](https://github.com/berkshelf/berkshelf/issues/535#issuecomment-40890497).
 
-# TOP-LEVEL APPLICATION
+# Top-Level Application
 
 In this case it's really nothing more than a templatable sample.html file served via apache.
 
 It outputs the value of the `node['sample_app']['words_of_wisdom']` attribute to the `sample.html` file and optionally the items of the data bag named `yummy` (if any).
 
-# TOOLING
+# Tooling
 
 It uses the following vagrant plugins:
 
@@ -28,7 +28,7 @@ It adds testing on the following levels:
  * integration tests via [test-kitchen](https://github.com/opscode/test-kitchen) / [serverspec](http://serverspec.org/)
 
 
-# USAGE
+# Usage
 
 ## Running Unit and Integration Tests
 
