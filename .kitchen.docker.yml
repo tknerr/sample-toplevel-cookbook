@@ -3,7 +3,10 @@ driver:
   name: docker
 
 driver_config:
-  provision_command: curl -L https://www.opscode.com/chef/install.sh | bash -s -- -p -v 12.3.0
+  provision_command: >
+    apt-get update
+    && apt-get install net-tools
+    && curl -L https://www.opscode.com/chef/install.sh | bash -s -- -p -v 12.3.0
   require_chef_omnibus: false
   use_sudo: false
 

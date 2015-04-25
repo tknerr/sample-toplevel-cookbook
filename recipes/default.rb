@@ -10,9 +10,6 @@
 # refresh apt cache
 include_recipe 'apt'
 
-# XXX: ensure netstat is installed because it's required by the serverspec tests
-package 'net-tools'
-
 # ensure default site is enabled and install apache
 node.set['apache']['default_site_enabled'] = true
 include_recipe 'apache2'
