@@ -4,8 +4,8 @@ driver:
 
 provisioner:
   name: chef_zero
-  require_chef_omnibus: 12.3.0.rc.0
-  chef_omnibus_install_options: -d /tmp/vagrant-cache/vagrant_omnibus
+  require_chef_omnibus: 12.3.0
+  chef_omnibus_install_options: -p -d /tmp/vagrant-cache/vagrant_omnibus
 
 platforms:
 - name: ubuntu-12.04
