@@ -2,7 +2,7 @@ machine:
   services:
     - docker
   ruby:
-    version: 2.1.3
+    version: 2.1.5
   environment:
     KITCHEN_LOCAL_YAML: .kitchen.docker.yml
 
