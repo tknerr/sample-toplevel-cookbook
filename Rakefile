@@ -1,11 +1,6 @@
 
 require 'bundler/setup'
 
-desc 'run syntax check'
-task :syntax do
-  sh 'knife cookbook test sample-app -o ..'
-end
-
 desc 'run foodcritic lint checks'
 task :foodcritic do
   sh 'foodcritic -f any .'
