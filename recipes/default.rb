@@ -14,11 +14,6 @@ include_recipe 'apt'
 node.set['apache']['default_site_enabled'] = true
 include_recipe 'apache2'
 
-# workaround for CHEF-4753
-if Chef::Config['data_bag_path'].is_a? Array
-  Chef::Config['data_bag_path'] = Chef::Config['data_bag_path'].first
-end
-
 # read yummy ingredients from databag
 begin
   yummy_stuff = data_bag('yummy').map { |id| data_bag_item('yummy', id) }
