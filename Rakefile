@@ -11,7 +11,7 @@ task :foodcritic do
   sh "foodcritic -f any ."
 end
 
-desc "check code style with tailor"
+desc "check code style with rubocop"
 task :codestyle do
   sh "rubocop --format progress --format offenses"
 end

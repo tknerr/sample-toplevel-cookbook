@@ -2,7 +2,7 @@
 .vagrant
 .gitignore
 .kitchen.yml
-.tailor
+.rubocop
 .travis.yml
 .kitchen
 test/*

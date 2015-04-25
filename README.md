@@ -24,7 +24,7 @@ It adds testing on the following levels:
 
  * cookbook syntax check via `knife cookbook test`
  * linting via [foodcritic](http://acrmp.github.io/foodcritic/)
- * codestyle check via [tailor](https://github.com/turboladen/tailor)
+ * codestyle & liniting via [rubocop](https://github.com/bbatsov/rubocop)
  * unit tests via [chefspec](https://github.com/acrmp/chefspec) (using [implicit receivers](http://stackoverflow.com/questions/12260534/using-implicit-subject-with-expect-in-rspec-2-11) for crisper syntax)
  * integration tests via [test-kitchen](https://github.com/opscode/test-kitchen) / [serverspec](http://serverspec.org/)
 
