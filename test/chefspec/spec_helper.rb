@@ -9,7 +9,7 @@ RSpec.configure do |config|
 end
 
 #
-# shortcut for converging the `described_recipe`. you can pass 
+# shortcut for converging the `described_recipe`. you can pass
 # an optional block for setting node attributes.
 #
 def chef_run(args = {}, &block)

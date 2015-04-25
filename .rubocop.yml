@@ -76,14 +76,3 @@ Style/SpaceInsideHashLiteralBraces:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 Style/StringLiterals:
   Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/TrailingBlankLines:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/TrailingWhitespace:
-  Enabled: false
