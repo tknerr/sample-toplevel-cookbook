@@ -59,9 +59,3 @@ Style/SingleSpaceBeforeFirstArg:
 # Configuration parameters: EnforcedStyleInsidePipes, SupportedStyles.
 Style/SpaceAroundBlockParameters:
   Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
-Style/SpaceInsideHashLiteralBraces:
-  Enabled: false
