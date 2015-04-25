@@ -3,7 +3,7 @@ driver:
   name: docker
 
 driver_config:
-  provision_command: curl -L https://www.opscode.com/chef/install.sh | bash -s -- -v 12.3.0.rc.0
+  provision_command: curl -L https://www.opscode.com/chef/install.sh | bash -s -- -p -v 12.3.0
   require_chef_omnibus: false
   use_sudo: false
 
