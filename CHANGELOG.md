@@ -1,7 +1,8 @@
 
 # 0.3.0 (unreleased)
 
-* ...
+* test / toolchain updates:
+  * Update to Chef 12.3.0
 
 # 0.2.2 (April 15, 2015)
 
