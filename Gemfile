@@ -13,7 +13,7 @@ end
 group :integration do
   gem 'vagrant-wrapper', '2.0.2'
   gem 'test-kitchen', '1.4.2'
-  gem 'kitchen-docker', '2.1.0'
+  gem 'kitchen-docker', '2.2.0'
   gem 'kitchen-vagrant', '0.18.0'
   gem 'serverspec', '2.21.1'
 end
