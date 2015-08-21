@@ -2,7 +2,8 @@
 # 0.3.0 (unreleased)
 
 * test / toolchain updates:
-  * Update to Chef 12.3.0
+  * Update to Chef 12.4.1
+  * Update gem dependencies to their latest version
 
 # 0.2.2 (April 15, 2015)
 
