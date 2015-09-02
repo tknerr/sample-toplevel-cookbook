@@ -1,6 +1,6 @@
 <%
 def box_for_provider(distro)
-  case ENV['VAGRANT_DEFAULT_PROVIDER']
+  case ENV.fetch('VAGRANT_DEFAULT_PROVIDER', 'virtualbox')
     when 'virtualbox' then "bento/#{distro}"
     when 'docker' then "tknerr/baseimage-#{distro}"
     else raise 'unsupported provider!'
