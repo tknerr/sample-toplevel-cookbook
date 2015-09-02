@@ -1,3 +1,12 @@
+<%
+def box_for_provider(distro)
+  case ENV['VAGRANT_DEFAULT_PROVIDER']
+    when 'virtualbox' then "bento/#{distro}"
+    when 'docker' then "tknerr/baseimage-#{distro}"
+    else raise 'unsupported provider!'
+  end
+end
+%>
 ---
 driver:
   name: vagrant
@@ -12,14 +21,12 @@ provisioner:
 platforms:
 - name: ubuntu-12.04
   driver_config:
-    box: bento/ubuntu-12.04-i386
-    box_url: https://atlas.hashicorp.com/bento/boxes/ubuntu-12.04-i386/versions/2.2.0/providers/virtualbox.box
+    box: <%= box_for_provider('ubuntu-12.04') %>
     customize:
       memory: 128
 - name: ubuntu-14.04
   driver_config:
-    box: bento/ubuntu-14.04
-    box_url: https://atlas.hashicorp.com/bento/boxes/ubuntu-14.04/versions/2.2.0/providers/virtualbox.box
+    box: <%= box_for_provider('ubuntu-14.04') %>
     customize:
       memory: 128
 
