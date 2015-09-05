@@ -15,15 +15,14 @@ It outputs the value of the `node['sample_app']['words_of_wisdom']` attribute to
 
 # Tooling
 
-It uses the following vagrant plugins:
+It's meant as an example [Chef](https://www.chef.io/chef/) cookbook and is also used for testing [Bill's Kitchen](https://github.com/tknerr/bills-kitchen) which bundles ChefDK, Vagrant and Docker for the Windows platform.
 
- * [vagrant-omnibus](https://github.com/schisamo/vagrant-omnibus) for installing Chef
- * [vagrant-berkshelf](https://github.com/riotgames/vagrant-berkshelf) for resolving the cookbook dependencies
+All development dependencies are declared in the [`Gemfile`](https://github.com/tknerr/sample-toplevel-cookbook/blob/master/Gemfile), which are mostly gems for cookbook testing.
 
-It adds testing on the following levels:
+We are testing on the following levels:
 
- * chef linting via [foodcritic](http://acrmp.github.io/foodcritic/)
  * ruby codestyle & liniting via [rubocop](https://github.com/bbatsov/rubocop)
+ * chef linting via [foodcritic](http://acrmp.github.io/foodcritic/)
  * unit tests via [chefspec](https://github.com/acrmp/chefspec) (using [implicit receivers](http://stackoverflow.com/questions/12260534/using-implicit-subject-with-expect-in-rspec-2-11) for crisper syntax)
  * integration tests via [test-kitchen](https://github.com/opscode/test-kitchen) / [serverspec](http://serverspec.org/)
 
@@ -37,9 +36,9 @@ It adds testing on the following levels:
 * run `rake test` to run all unit-level tests, including syntax, foodcritic, codestyle and chefspec
 * run `rake integration` to run integration tests via test-kitchen / serverspec
 
-## Running the Application in a Vagrant VM
+## Interacting with the Application using Test-Kitchen
 
-* run `vagrant up sample-app` to bring up the sample-app in a local virtualbox VM
-* visit http://172.16.40.15/sample.html to check whether our sample app is deployed
-* change the `:words_of_wisdom` in Vagrantfile, provision via `vagrant provision sample-app` and check the sample app again
-* run `vagrant destroy sample-app` to terminate and delete the VM
+* run `bundle exec kitchen converge` to bring up the sample-app in a local VM
+* visit http://localhost:8080/sample.html to check whether our sample app is deployed
+* change the `:words_of_wisdom` attribute in .kitchen.yml, provision via `bundle exec kitchen converge` and check the sample app again
+* run `bundle exec kitchen destroy` to terminate and delete the VM
