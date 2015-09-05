@@ -38,4 +38,5 @@ suites:
 - name: default
   run_list: ["recipe[sample-app]"]
   attributes:
-    words_of_wisdom: 'test all the things!'
+    sample_app:
+      words_of_wisdom: 'test all the things!'
