@@ -15,5 +15,5 @@ end
 
 describe file('/var/www/sample.html') do
   it { should be_file }
-  it { should contain 'I can haz cats!' }
+  it { should contain 'test all the things!' }
 end

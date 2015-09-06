@@ -22,15 +22,21 @@ platforms:
 - name: ubuntu-12.04
   driver_config:
     box: <%= box_for_provider('ubuntu-12.04') %>
+    network:
+      - ["forwarded_port", {guest: 80, host: 8080}]
     customize:
       memory: 128
 - name: ubuntu-14.04
   driver_config:
     box: <%= box_for_provider('ubuntu-14.04') %>
+    network:
+      - ["forwarded_port", {guest: 80, host: 9080}]
     customize:
       memory: 128
 
 suites:
 - name: default
   run_list: ["recipe[sample-app]"]
-  attributes: {}
+  attributes:
+    sample_app:
+      words_of_wisdom: 'test all the things!'
