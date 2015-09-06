@@ -17,9 +17,7 @@ It outputs the value of the `node['sample_app']['words_of_wisdom']` attribute to
 
 It's meant as an example [Chef](https://www.chef.io/chef/) cookbook and is also used for testing [Bill's Kitchen](https://github.com/tknerr/bills-kitchen) which bundles ChefDK, Vagrant and Docker for the Windows platform.
 
-All development dependencies are declared in the [`Gemfile`](https://github.com/tknerr/sample-toplevel-cookbook/blob/master/Gemfile), which are mostly gems for cookbook testing.
-
-We are testing on the following levels:
+All development dependencies are declared in the [`Gemfile`](https://github.com/tknerr/sample-toplevel-cookbook/blob/master/Gemfile), which are mostly gems for cookbook testing, and we are testing on the following levels:
 
  * ruby codestyle & liniting via [rubocop](https://github.com/bbatsov/rubocop)
  * chef linting via [foodcritic](http://acrmp.github.io/foodcritic/)
