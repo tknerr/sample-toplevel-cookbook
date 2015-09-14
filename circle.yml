@@ -4,9 +4,14 @@ machine:
   ruby:
     version: 2.1.5
   environment:
-    KITCHEN_LOCAL_YAML: .kitchen.docker.yml
+    VAGRANT_DEFAULT_PROVIDER: docker
 
 dependencies:
+  cache_directories:
+    - ~/.vagrant.d
+  pre:
+    - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb
+    - sudo dpkg -i vagrant_1.7.4_x86_64.deb
   override:
     - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3:
         timeout: 900
