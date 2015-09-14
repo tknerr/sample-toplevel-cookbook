@@ -1,19 +1,22 @@
 require 'spec_helper'
 
-describe package('apache2') do
-  it { should be_installed }
-end
+describe "sample-app::default" do
 
-describe service('apache2') do
-  it { should be_enabled   }
-  it { should be_running   }
-end
+  it "installs apache2" do
+    expect(package('apache2')).to be_installed
+  end
 
-describe port(80) do
-  it { should be_listening }
-end
+  it "runs starts the apache2 service" do
+    expect(service('apache2')).to be_enabled
+    expect(service('apache2')).to be_running
+  end
 
-describe file('/var/www/sample.html') do
-  it { should be_file }
-  it { should contain 'test all the things!' }
+  it "listens on port 80" do
+    expect(port(80)).to be_listening
+  end
+
+  it "renders the sample.html file" do
+    expect(file('/var/www/sample.html')).to be_file
+    expect(file('/var/www/sample.html')).to contain('test all the things!')
+  end
 end
