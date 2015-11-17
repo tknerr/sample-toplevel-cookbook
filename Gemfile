@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'chef', '12.4.1'
-gem 'berkshelf', '3.2.4'
+gem 'berkshelf', '4.0.1'
 gem 'stove', '3.2.7'
 
 group :test do
