@@ -2,7 +2,7 @@ machine:
   services:
     - docker
   ruby:
-    version: 2.1.5
+    version: 2.1.8
   environment:
     VAGRANT_DEFAULT_PROVIDER: docker
 
