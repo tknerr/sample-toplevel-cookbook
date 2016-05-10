@@ -24,14 +24,14 @@ platforms:
     network:
       - ["forwarded_port", {guest: 80, host: 8080}]
     customize:
-      memory: 128
+      memory: 256
 - name: ubuntu-14.04
   driver_config:
     box: <%= box_for_provider('ubuntu-14.04') %>
     network:
       - ["forwarded_port", {guest: 80, host: 9080}]
     customize:
-      memory: 128
+      memory: 256
 
 suites:
 - name: default
