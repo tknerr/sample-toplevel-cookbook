@@ -27,7 +27,7 @@ task :test => [:foodcritic, :codestyle, :spec]
 desc 'release the cookbook (metadata, tag, push)'
 task :release do
   print 'This will create and push a tag with the version from `metadata.rb`. Continue? [y/n] '
-  if (STDIN.gets.chomp).match(/^[yY][eE]?[sS]?$/)
+  if STDIN.gets.chomp =~ /^[yY][eE]?[sS]?$/
     sh 'stove --log-level info'
   else
     puts 'release aborted'

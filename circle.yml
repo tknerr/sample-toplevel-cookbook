@@ -2,7 +2,7 @@ machine:
   services:
     - docker
   ruby:
-    version: 2.1.5
+    version: 2.1.8
   environment:
     VAGRANT_DEFAULT_PROVIDER: docker
 
@@ -10,6 +10,7 @@ dependencies:
   cache_directories:
     - ~/.vagrant.d
   pre:
+    - gem update --system '2.6.3'
     - wget https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb
     - sudo dpkg -i vagrant_1.8.1_x86_64.deb
   override:

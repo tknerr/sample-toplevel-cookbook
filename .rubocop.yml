@@ -19,7 +19,7 @@ Style/MultilineBlockLayout:
   Exclude:
     - 'test/**/*.rb'
 
-Style/SingleSpaceBeforeFirstArg:
+Style/SpaceBeforeFirstArg:
   Enabled: false
 
 AllCops:
